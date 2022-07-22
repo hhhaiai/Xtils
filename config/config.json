@@ -1,0 +1,26 @@
+[
+  {
+    "hclassName":"xxx.xx.xx",
+    "htype":"constructor/field/method",
+    "hAll":false,
+    "hStatic":false,
+    "constructorArgsType":"类名全称1|类名全称2",
+    "fieldType":"类名全称",
+    "methodArgsType":"类名全称1|类名全称2",
+    "hProcessType":"modify/cat",
+    "hookTime":"before/after",
+    "needCall":false
+  },
+  {
+    "hclassName":"xxx.xx.xx",
+    "htype":"constructor/field/method",
+    "hAll":false,
+    "hStatic":true,
+    "constructorArgsType":"类名全称1|类名全称2",
+    "fieldType":"类名全称",
+    "methodArgsType":"类名全称1|类名全称2",
+    "hProcessType":"modify/cat",
+    "hookTime":"before/after",
+    "needCall":false
+  }
+]

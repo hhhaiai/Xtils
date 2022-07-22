@@ -6,8 +6,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
- >
+        android:roundIcon="@mipmap/ic_launcher_round">
         <activity
             android:name="me.hhhaiai.xtils.MainActivity"
             android:exported="true">
@@ -17,6 +16,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!--应用为模块, 使 xposed 模块有效-->
+        <meta-data
+            android:name="xposedmodule"
+            android:value="true" />
+        <!--模块描述-->
+        <meta-data
+            android:name="xposeddescription"
+            android:value="Xtils" />
+        <!--版本信息-->
+        <meta-data
+            android:name="xposedminversion"
+            android:value="50+" />
     </application>
 
 </manifest>
