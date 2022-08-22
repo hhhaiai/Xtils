@@ -3,7 +3,7 @@ package me.hhhaiai.xtils.utils;
 import android.util.Log;
 
 public class L {
-    private static final String TAG = "sanbo";
+    private static final String TAG = "sanbo.Xtils";
 
     public static void v(Throwable e) {
         v(Log.getStackTraceString(e));

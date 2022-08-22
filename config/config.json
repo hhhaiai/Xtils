@@ -1,26 +1,38 @@
 [
   {
-    "hclassName":"xxx.xx.xx",
-    "htype":"constructor/field/method",
-    "hAll":false,
-    "hStatic":false,
-    "constructorArgsType":"类名全称1|类名全称2",
-    "fieldType":"类名全称",
-    "methodArgsType":"类名全称1|类名全称2",
-    "hProcessType":"modify/cat",
-    "hookTime":"before/after",
-    "needCall":false
+    "hclassName" : "替换构造参数示例类",
+    "htype" : "constructor",
+    "constructorArgsType" : "参数1类全称|参数2类全称",
+    "hConsReplace" : [
+      {
+        "index" : 0,
+        "args" : "参数1真正的值"
+      },
+      {
+        "index" : 1,
+        "args" : "参数2真正的值"
+      }
+    ],
+    "hProcessType" : "modify"
   },
   {
-    "hclassName":"xxx.xx.xx",
-    "htype":"constructor/field/method",
-    "hAll":false,
-    "hStatic":true,
-    "constructorArgsType":"类名全称1|类名全称2",
-    "fieldType":"类名全称",
-    "methodArgsType":"类名全称1|类名全称2",
-    "hProcessType":"modify/cat",
-    "hookTime":"before/after",
-    "needCall":false
+    "hclassName" : "xxx.xx.xx",
+    "htype" : "method",
+    "methodArgsType" : "类名全称1|类名全称2",
+    "hProcessType" : "modify/cat",
+    "hookTime" : "before/after",
+    "needCall" : false
+  },
+  {
+    "hclassName" : "xxx.xx.xx",
+    "htype" : "constructor/field/method",
+    "hAll" : false,
+    "hStatic" : true,
+    "constructorArgsType" : "类名全称1|类名全称2",
+    "fieldType" : "类名全称",
+    "methodArgsType" : "类名全称1|类名全称2",
+    "hProcessType" : "modify/cat",
+    "hookTime" : "before/after",
+    "needCall" : false
   }
 ]

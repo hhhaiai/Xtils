@@ -6,13 +6,18 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 
 public class FileUtils {
+
+    public static String readString(String path) {
+        return readString(new File(path));
+
+    }
     /**
      * 读取文件中的字符串
      *
      * @param file
      * @return
      */
-    public static String readStringFromFile(File file) {
+    public static String readString(File file) {
 
         FileInputStream outputStream = null;
         BufferedReader reader = null;

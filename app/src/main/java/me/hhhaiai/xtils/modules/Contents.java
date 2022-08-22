@@ -8,6 +8,7 @@ package me.hhhaiai.xtils.modules;
  * @author: sanbo
  */
 public class Contents {
+    public static long delayMillis = 10 * 1000;
     public static String PATH_JSON = "/data/local/tmp/config.json";
     // hook类名称
     public static String JKEY_hClassName = "hclassName";

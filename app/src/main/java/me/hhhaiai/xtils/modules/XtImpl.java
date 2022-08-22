@@ -24,44 +24,44 @@ public class XtImpl {
             return;
         }
         mLpparam = lpparam;
-        for (int i = 0; i < arr.length(); i++) {
-            JSONObject obj = arr.optJSONObject(i);
-            //单个有效性检测
-            if (obj == null || obj.length() < 1) {
-                continue;
-            }
-            // 单个HOOK对象解析
-            String hClassName = obj.optString(Contents.JKEY_hClassName, "");
-            String htype = obj.optString(Contents.JKEY_hType, "");
-            boolean hStatic = obj.optBoolean(Contents.JKEY_hStatic, false);
-            String constructorArgsType = obj.optString(Contents.JKEY_ConstructorArgsType, "");
-            String nFieldName = obj.optString(Contents.JKEY_nField, "");
-            String fieldType = obj.optString(Contents.JKEY_FieldType, "");
-            String nMethodName = obj.optString(Contents.JKEY_nMethod, "");
-            String methodArgsType = obj.optString(Contents.JKEY_MethodArgsType, "");
-            String hProcessType = obj.optString(Contents.JKEY_hProcessType, Contents.ProcessType.processCat);
-            String hookTime = obj.optString(Contents.JKEY_HookTime, Contents.HookTime.atAnyTime);
-            boolean needCall = obj.optBoolean(Contents.JKEY_NeedCall, false);
-            boolean hAll = obj.optBoolean(Contents.JKEY_hALL, false);
-            // 参数有效性解析
-            if (TextUtils.isEmpty(hClassName) || TextUtils.isEmpty(htype)) {
-                continue;
-            }
-            // todo 暂不支持hAll和主动调用needCall
-            if (Contents.HookType.hookConstructor.equals(htype)) {
-                // hook constructor
-                hookConstructor(hClassName, constructorArgsType, hProcessType, hookTime);
-            } else if (Contents.HookType.hookField.equals(htype)) {
-                // hook field
-                if (!TextUtils.isEmpty(fieldType)) {
-                    // 变量必须有类型
-                    hookField(hClassName, nFieldName, fieldType, hStatic, hProcessType);
-                }
-            } else if (Contents.HookType.hookMethod.equals(htype)) {
-                // hook method
-                hookMethod(hClassName, nMethodName, methodArgsType, hookTime);
-            }
-        }
+//        for (int i = 0; i < arr.length(); i++) {
+//            JSONObject obj = arr.optJSONObject(i);
+//            //单个有效性检测
+//            if (obj == null || obj.length() < 1) {
+//                continue;
+//            }
+//            // 单个HOOK对象解析
+//            String hClassName = obj.optString(Contents.JKEY_hClassName, "");
+//            String htype = obj.optString(Contents.JKEY_hType, "");
+//            boolean hStatic = obj.optBoolean(Contents.JKEY_hStatic, false);
+//            String constructorArgsType = obj.optString(Contents.JKEY_ConstructorArgsType, "");
+//            String nFieldName = obj.optString(Contents.JKEY_nField, "");
+//            String fieldType = obj.optString(Contents.JKEY_FieldType, "");
+//            String nMethodName = obj.optString(Contents.JKEY_nMethod, "");
+//            String methodArgsType = obj.optString(Contents.JKEY_MethodArgsType, "");
+//            String hProcessType = obj.optString(Contents.JKEY_hProcessType, Contents.ProcessType.processCat);
+//            String hookTime = obj.optString(Contents.JKEY_HookTime, Contents.HookTime.atAnyTime);
+//            boolean needCall = obj.optBoolean(Contents.JKEY_NeedCall, false);
+//            boolean hAll = obj.optBoolean(Contents.JKEY_hALL, false);
+//            // 参数有效性解析
+//            if (TextUtils.isEmpty(hClassName) || TextUtils.isEmpty(htype)) {
+//                continue;
+//            }
+//            // todo 暂不支持hAll和主动调用needCall
+//            if (Contents.HookType.hookConstructor.equals(htype)) {
+//                // hook constructor
+//                hookConstructor(hClassName, constructorArgsType, hProcessType, hookTime);
+//            } else if (Contents.HookType.hookField.equals(htype)) {
+//                // hook field
+//                if (!TextUtils.isEmpty(fieldType)) {
+//                    // 变量必须有类型
+//                    hookField(hClassName, nFieldName, fieldType, hStatic, hProcessType);
+//                }
+//            } else if (Contents.HookType.hookMethod.equals(htype)) {
+//                // hook method
+//                hookMethod(hClassName, nMethodName, methodArgsType, hookTime);
+//            }
+//        }
 
     }
 
